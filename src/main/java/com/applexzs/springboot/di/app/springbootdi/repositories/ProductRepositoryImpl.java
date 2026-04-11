@@ -1,12 +1,15 @@
 package com.applexzs.springboot.di.app.springbootdi.repositories;
 
 import com.applexzs.springboot.di.app.springbootdi.models.Product;
+import org.springframework.stereotype.Component;
 
 import java.util.Arrays;
 import java.util.List;
 
-public class ProductRepositoryImpl implements IProductRepository{
 
+@Component
+public class ProductRepositoryImpl implements IProductRepository{
+    
     private List<Product> data;
 
     public ProductRepositoryImpl() {

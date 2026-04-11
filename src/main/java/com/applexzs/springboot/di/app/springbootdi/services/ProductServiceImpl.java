@@ -1,14 +1,19 @@
 package com.applexzs.springboot.di.app.springbootdi.services;
 
 import com.applexzs.springboot.di.app.springbootdi.models.Product;
-import com.applexzs.springboot.di.app.springbootdi.repositories.ProductRepositoryImpl;
+import com.applexzs.springboot.di.app.springbootdi.repositories.IProductRepository;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
 import java.util.List;
 import java.util.stream.Collectors;
 
+
+@Component
 public class ProductServiceImpl implements IProductService {
 
-    private ProductRepositoryImpl repository = new ProductRepositoryImpl();
+    @Autowired
+    private IProductRepository repository;
 
     @Override
     public List<Product> findAll(){
