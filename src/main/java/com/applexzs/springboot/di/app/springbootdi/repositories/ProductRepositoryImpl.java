@@ -1,13 +1,14 @@
 package com.applexzs.springboot.di.app.springbootdi.repositories;
 
 import com.applexzs.springboot.di.app.springbootdi.models.Product;
-import org.springframework.stereotype.Component;
+import org.springframework.context.annotation.Primary;
+import org.springframework.stereotype.Repository;
 
 import java.util.Arrays;
 import java.util.List;
 
-
-@Component
+@Primary
+@Repository("productList")
 public class ProductRepositoryImpl implements IProductRepository{
     
     private List<Product> data;

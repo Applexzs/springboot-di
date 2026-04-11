@@ -3,17 +3,24 @@ package com.applexzs.springboot.di.app.springbootdi.services;
 import com.applexzs.springboot.di.app.springbootdi.models.Product;
 import com.applexzs.springboot.di.app.springbootdi.repositories.IProductRepository;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.stream.Collectors;
 
 
-@Component
+@Service
 public class ProductServiceImpl implements IProductService {
 
     @Autowired
+    @Qualifier("productFoo")
     private IProductRepository repository;
+
+
+//    public ProductServiceImpl(@Qualifier("productFoo") IProductRepository repository) {
+//        this.repository = repository;
+//    }
 
     @Override
     public List<Product> findAll(){
