@@ -3,10 +3,13 @@ package com.applexzs.springboot.di.app.springbootdi.repositories;
 import com.applexzs.springboot.di.app.springbootdi.models.Product;
 import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Repository;
+//import org.springframework.web.context.annotation.RequestScope;
+//import org.springframework.web.context.annotation.SessionScope;
 
 import java.util.Arrays;
 import java.util.List;
 
+//@RequestScope
 @Primary
 @Repository("productList")
 public class ProductRepositoryImpl implements IProductRepository{
