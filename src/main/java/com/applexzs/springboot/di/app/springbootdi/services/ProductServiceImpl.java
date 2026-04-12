@@ -16,7 +16,7 @@ import java.util.stream.Collectors;
 public class ProductServiceImpl implements IProductService {
 
     @Autowired
-    @Qualifier("productList")
+    @Qualifier("productRepositoryJson")
     private IProductRepository repository;
 
     @Autowired
